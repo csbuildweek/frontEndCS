@@ -1,0 +1,8 @@
+@import '../../SCSS/index.scss';
+
+.ButtonWrapper {
+  @include customLayout(space-evenly, center, row);
+  .icon {
+    font-size: 2.5rem;
+  }
+}

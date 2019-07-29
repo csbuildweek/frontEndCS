@@ -1,8 +1,12 @@
 import React from 'react';
 
+import Controls from './Controls/Controls.js';
+
 const Home = () => {
   return (
-  <p>HOME</p>
+    <main>
+    <Controls />
+    </main>
   )
 }
 
