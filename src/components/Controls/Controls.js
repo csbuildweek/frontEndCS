@@ -40,7 +40,7 @@ const icons = [
 ]
 
 
-const Controls = () => {
+const Controls = ({ setOptions, setCount }) => {
   //const [direction, setDirection] = useState("")
   const [message, setMessage] = useState("")
   //const [directionURL, setDirectionURL] = useState("")
@@ -73,6 +73,8 @@ const Controls = () => {
         icon={icon.icon}
         path={icon.path}
         request={icon.request}
+        setOptions={setOptions}
+        setCount={setCount}
         />
       )
     })}

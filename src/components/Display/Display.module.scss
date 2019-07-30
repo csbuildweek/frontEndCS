@@ -1,0 +1,15 @@
+@import '../../SCSS/index.scss';
+
+.OptionsWrapper {
+  @include customLayout(space-evenly, center, column);
+  //border: 1px solid red;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ItemContainer {
+  @include customLayout(space-around, center, row);
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid limegreen;
+}

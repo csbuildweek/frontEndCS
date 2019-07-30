@@ -1,0 +1,12 @@
+@import '../../SCSS/index.scss';
+
+.CommandBtnWrapper {
+  @include customLayout(space-evenly, center, row);
+  width: 100%;
+  flex-wrap: wrap;
+  //border: 1px solid red;
+}
+
+.icon {
+  font-size: 3rem;
+}
