@@ -1,10 +1,21 @@
 import React from 'react';
 import styles from './ControlBtn.module.scss';
 
-const ControlBtn = ({ icon, directionURL }) => {
-  console.log("icon: ", icon)
+const movePlayer = (path, request) => {
+  //console.log("request: ", request)
+  fetch(path, {request} ).then(res => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err)
+  })
+}
+const ControlBtn = ({ icon, path, request }) => {
+  //console.log("icon: ", icon, "path: ", path, "request: ", request)
   return (
-  <button className={styles.ControlBtn}>{icon}</button>
+    <button
+    className={styles.ControlBtn}
+    onClick={movePlayer}
+     >{icon}</button>
   )
 }
 

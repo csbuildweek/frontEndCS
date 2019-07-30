@@ -8,22 +8,34 @@ const icons = [
   {
     id: 1,
     icon: <FiCornerRightUp className={styles.icon} />,
-    path: ""
+    path: "https://lambda-flask-pirate.herokuapp.com/move",
+    request: {
+      "direction": "n"
+    }
   },
   {
     id: 2,
     icon: <FiCornerRightDown className={styles.icon} />,
-    path: ""
+    path: "https://lambda-flask-pirate.herokuapp.com/move",
+    request: {
+      "direction": "s"
+    }
   },
   {
     id: 3,
     icon: <FiCornerUpRight className={styles.icon} />,
-    path: ""
+    path: "https://lambda-flask-pirate.herokuapp.com/move",
+    request: {
+      direction: "e"
+    }
   },
   {
     id: 4,
     icon: <FiCornerUpLeft className={styles.icon} />,
-    path: ""
+    path: "https://lambda-flask-pirate.herokuapp.com/move",
+    request: {
+      "direction": "w"
+    }
   },
 ]
 
@@ -31,7 +43,7 @@ const icons = [
 const Controls = () => {
   //const [direction, setDirection] = useState("")
   const [message, setMessage] = useState("")
-  const [directionURL, setDirectionURL] = useState("")
+  //const [directionURL, setDirectionURL] = useState("")
   const [navOptions] = useState(icons)
 
   const movePlayer = (direction) => {
@@ -49,18 +61,18 @@ const Controls = () => {
       return directionURL = ""
     }
     setMessage(message)
-    setDirectionURL(directionURL)
+    //setDirectionURL(directionURL)
   }
   return (
     <section className={styles.ButtonWrapper}>
     {navOptions.map(icon => {
-      console.log(icon)
+      //console.log(icon)
       return (
         <ControlBtn
         key={icon.id}
         icon={icon.icon}
-        directionURL={icon.path}
-        movePlayer={movePlayer}
+        path={icon.path}
+        request={icon.request}
         />
       )
     })}
