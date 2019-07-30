@@ -7,6 +7,7 @@ import Display from './Display/Display.js'
 const Home = () => {
   const [options, setOptions] = useState(null)
   const [count, setCount] = useState(0)
+  const [picked, setPicked] = useState("")
   return (
     <main>
     {options &&
@@ -14,6 +15,7 @@ const Home = () => {
           options={options}
           setCount={setCount}
           count={count}
+          setPicked={setPicked}
         />}
     <Controls
     setOptions={setOptions}
@@ -21,6 +23,9 @@ const Home = () => {
     />
     <Commands
     setOptions={setOptions}
+    options={options}
+    picked={picked}
+    setPicked={setPicked}
     />
     </main>
   )

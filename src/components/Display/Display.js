@@ -4,7 +4,7 @@ import Item from './Item.js';
 
 import styles from './Display.module.scss';
 
-const Display = ({ options, count, setCount }) => {
+const Display = ({ options, count, setCount, setPicked }) => {
   //const [count, setCount] = useState(options.cooldown)
   //const countDown = (cooldown) => {
     //let count;
@@ -30,8 +30,8 @@ const Display = ({ options, count, setCount }) => {
   return (
     <section className={styles.OptionsWrapper}>
     {console.log("options: ", options)}
-    <p>{count}</p>
-    <p>CD: {options.cooldown}</p>
+    <p>CD: {count}</p>
+    {/*<p>CD: {options.cooldown}</p>*/}
     <p>Description: {options.description}</p>
     <p>Coordinates: {options.coordinates}</p>
     <p>Elevation: {options.elevation}</p>
@@ -49,6 +49,8 @@ const Display = ({ options, count, setCount }) => {
         <div className={styles.ItemContainer} key={index}>
         <Item
         item={item}
+        index={index}
+        setPicked={setPicked}
         />
         </div>
       )

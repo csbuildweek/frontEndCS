@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Item = ({ item }) => {
+const Item = ({ item, index, picked, setPicked }) => {
+  const selectItem = (index) => {
+    console.log("clicked item: ", index, item)
+    setPicked(item)
+  }
   return (
-    <p>{item}</p>
+    <button
+    onClick={(e) => selectItem(index)}
+    >{item}</button>
   )
 }
 

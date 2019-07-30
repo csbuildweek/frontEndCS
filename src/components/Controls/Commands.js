@@ -37,7 +37,7 @@ const commandOptions = [
   }
 ]
 
-const Commands = () => {
+const Commands = ({ options, setOptions, picked }) => {
   const [CMD, setCMD] = useState(commandOptions)
   return (
     <section className={styles.CommandBtnWrapper}>
@@ -48,6 +48,9 @@ const Commands = () => {
         icon={icon.icon}
         path={icon.path}
         name={icon.name}
+        options={options}
+        setOptions={setOptions}
+        picked={picked}
         />
       )
     })}

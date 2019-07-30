@@ -1,16 +1,24 @@
 import React from 'react';
 import styles from './CommandBtn.module.scss';
 
-const CommandBtn = ({ icon, path, name }) => {
+const CommandBtn = ({ icon, path, name, options, setOptions, picked }) => {
 
-  const pickUp = () => {
-    console.log("pick up")
+  let updatedName;
+  const pickUp = (picked) => {
+    console.log("picked: ", picked)
+    fetch(path, {method: "post", headers: {
+      'Content-Type': "application/json"
+    }, body: JSON.stringify({name: picked})}).then(res => res.json()).then(async data => {
+      console.log(data)
+      updatedName = await data
+      console.log(updatedName.data)
+    })
   }
 
   return (
     <button
     className={styles.CommandBtn}
-    onClick={() => pickUp()}
+    onClick={(e) => pickUp(picked)}
     >
     <span>{name}: {icon}</span>
     </button>
