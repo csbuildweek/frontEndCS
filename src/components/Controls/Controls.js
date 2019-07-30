@@ -9,25 +9,33 @@ const icons = [
     id: 1,
     icon: <FiCornerRightUp className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/move",
-    direction: "n"
+    request: {
+      "direction": "n"
+    }
   },
   {
     id: 2,
     icon: <FiCornerRightDown className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/move",
-    direction: "s"
+    request: {
+      "direction": "s"
+    }
   },
   {
     id: 3,
     icon: <FiCornerUpRight className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/move",
-    direction: "e"
+    request: {
+      direction: "e"
+    }
   },
   {
     id: 4,
     icon: <FiCornerUpLeft className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/move",
-    direction: "w"
+    request: {
+      "direction": "w"
+    }
   },
 ]
 
@@ -64,7 +72,7 @@ const Controls = () => {
         key={icon.id}
         icon={icon.icon}
         path={icon.path}
-        direction={icon.direction}
+        request={icon.request}
         />
       )
     })}
