@@ -1,0 +1,14 @@
+@import '../../SCSS/index.scss';
+
+.SellBtn {
+  @include customLayout(space-evenly, center, row);
+  box-shadow: 0 1px 3px 1px #1d1d1d;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 3.5rem;
+}

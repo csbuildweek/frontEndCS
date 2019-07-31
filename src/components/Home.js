@@ -5,6 +5,7 @@ import Controls from './Controls/Controls.js';
 import TakeBtn from './Buttons/TakeBtn.js';
 import StatusBtn from './Buttons/StatusBtn.js';
 import DropBtn from './Buttons/DropBtn.js';
+import SellBtn from './Buttons/SellBtn.js';
 import Display from './Display/Display.js';
 import Inventory from './Inventory/Inventory.js';
 
@@ -34,6 +35,7 @@ const Home = () => {
     <TakeBtn picked={picked}/>
     <StatusBtn inventory={inventory} setInventory={setInventory}  />
     <DropBtn drop={drop} />
+    <SellBtn drop={drop}/>
     </div>
     {inventory &&<Inventory inventory={inventory} setDrop={setDrop} drop={drop}/>}
     {/*<Commands
