@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 
 import Controls from './Controls/Controls.js';
-import Commands from './Controls/Commands.js';
-import Display from './Display/Display.js'
+//import Commands from './Controls/Commands.js';
+import TakeBtn from './Buttons/TakeBtn.js';
+import Display from './Display/Display.js';
 
 const Home = () => {
   const [options, setOptions] = useState(null)
@@ -21,12 +22,13 @@ const Home = () => {
     setOptions={setOptions}
     setCount={setCount}
     />
-    <Commands
+    <TakeBtn picked={picked}/>
+    {/*<Commands
     setOptions={setOptions}
     options={options}
     picked={picked}
     setPicked={setPicked}
-    />
+    />*/}
     </main>
   )
 }

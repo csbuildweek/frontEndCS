@@ -12,9 +12,9 @@ const commandOptions = [
     icon: <GiCardPlay className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/take",
     name: "Pick up",
-    operation: function(picked) {
-console.log("picked: ", picked)
-      console.log("path: ", path)
+    operation: function(thing = picked) {
+//console.log("picked: ", picked)
+      //console.log("path: ", path)
       fetch("https://lambda-flask-pirate.herokuapp.com/take", {method: "post", headers: {
   'Content-Type': "application/json"
 }, body: JSON.stringify({"name": picked})}).then(res => res.json()).then(async data => {

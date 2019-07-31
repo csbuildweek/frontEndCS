@@ -18,7 +18,7 @@ const CommandBtn = ({ icon, path, name, options, setOptions, picked, operation }
   return (
     <button
     className={styles.CommandBtn}
-    onClick={(e) => operation()}
+    onClick={(e) => operation(picked)}
     >
     <span>{name}: {icon}</span>
     </button>
