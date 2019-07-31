@@ -1,6 +1,6 @@
 @import '../../SCSS/index.scss';
 
-.TakeBtn {
+.DropBtn {
   @include customLayout(space-evenly, center, row);
   box-shadow: 0 1px 3px 1px #1d1d1d;
   border: none;

@@ -4,6 +4,7 @@ import Controls from './Controls/Controls.js';
 //import Commands from './Controls/Commands.js';
 import TakeBtn from './Buttons/TakeBtn.js';
 import StatusBtn from './Buttons/StatusBtn.js';
+import DropBtn from './Buttons/DropBtn.js';
 import Display from './Display/Display.js';
 import Inventory from './Inventory/Inventory.js';
 
@@ -14,7 +15,7 @@ const Home = () => {
   const [count, setCount] = useState(0)
   const [picked, setPicked] = useState("")
   const [inventory, setInventory] = useState(null)
-
+  const [drop, setDrop] = useState("")
 
   return (
     <main>
@@ -32,8 +33,9 @@ const Home = () => {
     <div className={styles.CmdBtnWrapper}>
     <TakeBtn picked={picked}/>
     <StatusBtn inventory={inventory} setInventory={setInventory}  />
+    <DropBtn drop={drop} />
     </div>
-    {inventory &&<Inventory inventory={inventory}/>}
+    {inventory &&<Inventory inventory={inventory} setDrop={setDrop} drop={drop}/>}
     {/*<Commands
     setOptions={setOptions}
     options={options}

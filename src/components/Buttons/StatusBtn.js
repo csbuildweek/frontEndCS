@@ -16,15 +16,9 @@ const StatusBtn = ({ inventory, setInventory}) => {
       console.log("upInvent: ", updatedInventory.data)
       setInventory(updatedInventory.data)
       console.log(inventory)
-      //return updatedInventory;
     })
-    //setInventory(updatedInventory)
-    //console.log(inventory)
   }
 
-  //useEffect(() => {
-    //setInventory(updatedInventory)
-  //}, [updatedInventory])
 
   return (
     <button
