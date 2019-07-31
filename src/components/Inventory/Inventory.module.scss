@@ -1,0 +1,7 @@
+@import '../../SCSS/index.scss';
+
+.InventoryWrapper {
+  @include showMe();
+  width: 80%;
+  margin: 0 auto;
+}

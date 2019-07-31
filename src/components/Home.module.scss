@@ -1,0 +1,7 @@
+@import '../SCSS/index.scss';
+
+.CmdBtnWrapper {
+  @include customLayout(space-evenly, center, row);
+  flex-wrap: wrap;
+  margin: 3% auto;
+}
