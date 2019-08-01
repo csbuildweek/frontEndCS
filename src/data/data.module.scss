@@ -1,19 +1,25 @@
 @import '../SCSS/index.scss';
 
 .MapContainer {
-  //@include customLayout(space-evenly, center, row);
+  @include customLayout(center, center, row);
   //flex-wrap: wrap;
   border: 2px solid blue;
   width: 100%;
   margin: 0 auto;
-  padding: 5%;
+  padding: 3%;
   //height: 70vh;
 }
 
 .location {
-  display: inline-block;
+  //display: inline-block;
   width: 5px;
-  height: 5px;
-  margin: 2px;
+  height: 7px;
+  margin: 7px;
   background: #1d1d1d;
+  margin: 5px 5px;
 }
+
+//.row {
+  //display: flex;
+  //flex-direction: row;
+//}

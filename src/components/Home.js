@@ -9,6 +9,8 @@ import SellBtn from './Buttons/SellBtn.js';
 import Display from './Display/Display.js';
 import Inventory from './Inventory/Inventory.js';
 import DataMap from '../data/data.js';
+import ChangeName from './Buttons/ChangeName.js';
+import ShrineBtn from './Buttons/ShrineBtn.js';
 
 import styles from './Home.module.scss';
 
@@ -18,6 +20,7 @@ const Home = () => {
   const [picked, setPicked] = useState("")
   const [inventory, setInventory] = useState(null)
   const [drop, setDrop] = useState("")
+  const [newName, setNewName] = useState("")
 
   return (
     <main>
@@ -38,6 +41,8 @@ const Home = () => {
     <StatusBtn inventory={inventory} setInventory={setInventory}  />
     <DropBtn drop={drop} />
     <SellBtn drop={drop}/>
+    <ChangeName newName={newName} setNewName={setNewName}/>
+    <ShrineBtn />
     </div>
     {inventory &&<Inventory inventory={inventory} setDrop={setDrop} drop={drop}/>}
     {/*<Commands
