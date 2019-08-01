@@ -39,6 +39,7 @@ const Display = ({ options, count, setCount, setPicked }) => {
     <p>RoomID: {options.room_id}</p>
     <p>Terrain: {options.terrain}</p>
     <p>Title: {options.title}</p>
+    <p>Title: {options.title}</p>
     <div className={styles.playerContainer}>
     {options.players && options.players.map((player, index) => {
       return (

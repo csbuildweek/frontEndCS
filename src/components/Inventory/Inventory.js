@@ -16,6 +16,7 @@ const Inventory = ({ inventory, setDrop, drop }) => {
     <p className={styles.gold}>Gold: {inventory.gold}</p>
     <p className={styles.strength}>Strength: {inventory.strength}</p>
     <p className={styles.speed}>Speed: {inventory.speed}</p>
+    <p className={styles.has_mined}>Has Mined: {`${inventory.has_mined}`}</p>
     {inventory.messages && inventory.messages.map((message, index) => {
       return (
       <p key={index}>{message}</p>
