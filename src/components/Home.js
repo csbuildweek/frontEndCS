@@ -12,6 +12,7 @@ import DataMap from '../data/data.js';
 import ChangeName from './Buttons/ChangeName.js';
 import ShrineBtn from './Buttons/ShrineBtn.js';
 import FlyControls from './Controls/FlyControls.js';
+import BalanceBtn from './Buttons/BalanceBtn.js';
 
 import styles from './Home.module.scss';
 
@@ -48,6 +49,7 @@ const Home = () => {
     <SellBtn drop={drop}/>
     <ChangeName newName={newName} setNewName={setNewName}/>
     <ShrineBtn setOptions={setOptions} setCount={setCount}/>
+    <BalanceBtn />
     </div>
     {inventory &&<Inventory inventory={inventory} setDrop={setDrop} drop={drop}/>}
     {/*<Commands
