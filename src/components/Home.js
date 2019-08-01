@@ -8,6 +8,7 @@ import DropBtn from './Buttons/DropBtn.js';
 import SellBtn from './Buttons/SellBtn.js';
 import Display from './Display/Display.js';
 import Inventory from './Inventory/Inventory.js';
+import DataMap from '../data/data.js';
 
 import styles from './Home.module.scss';
 
@@ -20,6 +21,7 @@ const Home = () => {
 
   return (
     <main>
+    <DataMap />
     {options &&
         <Display
           options={options}
