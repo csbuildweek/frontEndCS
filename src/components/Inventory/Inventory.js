@@ -10,12 +10,12 @@ const Inventory = ({ inventory, setDrop, drop }) => {
   console.log(inventory.messages)
   return (
     <section className={styles.InventoryWrapper}>
-    <h2>Inventory:</h2>
-    <p>Name: {inventory.name}</p>
-    <p>Encumbrance: {inventory.encumbrance}</p>
-    <p>Gold: {inventory.gold}</p>
-    <p>Strength: {inventory.strength}</p>
-    <p>Speed: {inventory.speed}</p>
+    <h2 className={styles.header}>Inventory:</h2>
+    <p className={styles.playerName}>Name: {inventory.name}</p>
+    <p className={styles.encumbrance}>Encumbrance: {inventory.encumbrance}</p>
+    <p className={styles.gold}>Gold: {inventory.gold}</p>
+    <p className={styles.strength}>Strength: {inventory.strength}</p>
+    <p className={styles.speed}>Speed: {inventory.speed}</p>
     {inventory.messages && inventory.messages.map((message, index) => {
       return (
       <p key={index}>{message}</p>

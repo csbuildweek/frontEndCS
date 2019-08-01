@@ -26,7 +26,7 @@ const icons = [
     icon: <FiCornerUpRight className={styles.icon} />,
     path: "https://lambda-flask-pirate.herokuapp.com/move",
     request: {
-      direction: "e"
+      "direction": "e"
     }
   },
   {

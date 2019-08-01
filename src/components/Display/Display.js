@@ -39,11 +39,13 @@ const Display = ({ options, count, setCount, setPicked }) => {
     <p>RoomID: {options.room_id}</p>
     <p>Terrain: {options.terrain}</p>
     <p>Title: {options.title}</p>
+    <div className={styles.playerContainer}>
     {options.players && options.players.map((player, index) => {
       return (
-        <p key={index}>Players: {player}</p>
+        <p key={index} className={styles.players}>Player(s): {player}</p>
       )
     })}
+    </div>
     {options.items &&  options.items.map((item, index) => {
       return (
         <div className={styles.ItemContainer} key={index}>

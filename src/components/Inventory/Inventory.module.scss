@@ -1,7 +1,49 @@
 @import '../../SCSS/index.scss';
 
 .InventoryWrapper {
-  @include showMe();
-  width: 80%;
-  margin: 0 auto;
+  //@include showMe();
+  box-shadow: 0 1px 6px 2px #1d1d1d;
+  padding: 3%;
+  border: none;
+  @include customLayout(center, flex-start, column);
+  width: 50%;
+  margin: 5% auto;
+}
+
+.header {
+  color: $primaryDark;
+  font-family: $stylishText;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weigh: $bold;
+}
+
+.playerName {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1d1d1d;
+}
+
+.encumbrance {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1d1d1d;
+}
+
+.gold {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1d1d1d;
+}
+
+.strength {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1d1d1d;
+}
+
+.speed {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #1d1d1d;
 }

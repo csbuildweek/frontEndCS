@@ -18,6 +18,7 @@ const ControlBtn = ({ icon, path, request, setOptions, setCount }) => {
         return updatedOptions
     }).catch(err => {
       console.log(err)
+      console.log("updatedOptions: ", updatedOptions)
     })
   }
 

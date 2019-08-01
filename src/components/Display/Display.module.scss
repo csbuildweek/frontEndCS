@@ -1,10 +1,16 @@
 @import '../../SCSS/index.scss';
 
 .OptionsWrapper {
-  @include customLayout(space-evenly, center, column);
+  @include customLayout(center, flex-start, column);
   //border: 1px solid red;
   width: 90%;
-  margin: 0 auto;
+  margin: 1% auto;
+  padding: 2%;
+  p {
+    font-size: 1.5rem;
+    //text-transform: capitalize;
+    color: #1d1d1d;
+  }
 }
 
 .ItemContainer {
@@ -12,4 +18,14 @@
   width: 80%;
   margin: 0 auto;
   border: 2px solid limegreen;
+}
+
+.playerContainer {
+  @include customLayout(flex-start, flex-start, row);
+  flex-wrap: wrap;
+  width: 90%;
+  //@include showMe();
+  .players {
+    margin: 0 1%;
+  }
 }
