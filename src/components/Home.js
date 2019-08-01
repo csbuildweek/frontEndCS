@@ -11,6 +11,7 @@ import Inventory from './Inventory/Inventory.js';
 import DataMap from '../data/data.js';
 import ChangeName from './Buttons/ChangeName.js';
 import ShrineBtn from './Buttons/ShrineBtn.js';
+import FlyControls from './Controls/FlyControls.js';
 
 import styles from './Home.module.scss';
 
@@ -36,13 +37,17 @@ const Home = () => {
     setOptions={setOptions}
     setCount={setCount}
     />
+    <FlyControls
+    setOptions={setOptions}
+    setCount={setCount}
+    />
     <div className={styles.CmdBtnWrapper}>
     <TakeBtn picked={picked}/>
     <StatusBtn inventory={inventory} setInventory={setInventory}  />
     <DropBtn drop={drop} />
     <SellBtn drop={drop}/>
     <ChangeName newName={newName} setNewName={setNewName}/>
-    <ShrineBtn />
+    <ShrineBtn setOptions={setOptions} setCount={setCount}/>
     </div>
     {inventory &&<Inventory inventory={inventory} setDrop={setDrop} drop={drop}/>}
     {/*<Commands
